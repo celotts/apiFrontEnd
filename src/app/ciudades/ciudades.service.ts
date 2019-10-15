@@ -52,10 +52,10 @@ export class CiudadesService {
 
 
   /* ciudadesClima(): Observable<any> {
-      console.log("eeeeeeeeeeee");
-      return new Observable(mensaje => {
-      console.log("qqqqq", mensaje);
-      //this.ciudades = mensaje;
-      });
-    } */
+        console.log("eeeeeeeeeeee");
+        return new Observable(mensaje => {
+        console.log("qqqqq", mensaje);
+        //this.ciudades = mensaje;
+        });
+      } */
 }
