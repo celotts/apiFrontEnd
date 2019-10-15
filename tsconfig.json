@@ -19,6 +19,14 @@
       "dom"
     ]
   },
+
+    "rules": {
+      "quotemark": [
+        true,
+        "single",
+        "avoid-escape"
+      ]
+    },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

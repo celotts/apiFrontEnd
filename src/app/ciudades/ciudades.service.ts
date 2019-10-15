@@ -31,31 +31,31 @@ export class CiudadesService {
 
   onCiudadesClima(): void {
     this.socket.on('connect', (res) => {
-      console.log("Conectado con el servidor");
+      console.log('Conectado con el servidor');
       this.ciudadesSource.next(res);
     });
 
     this.socket.on('disconnect', () => {
-      console.log("Se perdió conexión con el servidor");
+      console.log('Se perdió conexión con el servidor');
     });
 
     // Emitir
     this.socket.emit('solicitarInformacion', () => {
-
+      this.getCiudades();
     });
 
-    //Escuchar
-    this.socket.on("enviarData", (resData) => {
-      console.log("se recibe la data:", resData);
-    })
+    // Escuchar
+    this.socket.on('enviarData', (resData) => {
+      console.log('se recibe la data:', resData);
+    });
   }
 
 
   /* ciudadesClima(): Observable<any> {
-    console.log("eeeeeeeeeeee");
-    return new Observable(mensaje => {
+      console.log("eeeeeeeeeeee");
+      return new Observable(mensaje => {
       console.log("qqqqq", mensaje);
       //this.ciudades = mensaje;
-    });
-  } */
+      });
+    } */
 }
